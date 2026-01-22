@@ -1,0 +1,5 @@
+diet_type,recommendation_score,safety_score,health_score,product_name,Top_Product,Category
+Keto,0.6466,0.5831,0.7417,160,Product_2185,Dairy
+Regular,0.6575,0.595,0.7512,120,Product_2185,Dairy
+Vegan,0.6506,0.588,0.7444,100,Product_2185,Dairy
+Vegetarian,0.6551,0.58,0.7677,120,Product_464,Meat
