@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 import os
 import sys
-from comparative_analysis import RecommenderAnalytics
+from .comparative_analysis import RecommenderAnalytics
 
 # Fix for plotting without display
 import matplotlib
@@ -111,7 +111,7 @@ def main():
         analytics.plot_comparative_analysis(
             diet_comp, 
             'Recommendation Scores by Diet Type', 
-            save_path='analysis_diet_type.png'
+            save_path='outputs/analysis_diet_type.png'
         )
         print("   Saved analysis_diet_type.png")
         
@@ -119,7 +119,7 @@ def main():
         analytics.plot_comparative_analysis(
             goal_comp, 
             'Scores by Health Goal', 
-            save_path='analysis_health_goal.png'
+            save_path='outputs/analysis_health_goal.png'
         )
         print("   Saved analysis_health_goal.png")
 
