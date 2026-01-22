@@ -55,6 +55,65 @@ When notebooks are run, they produce:
 
 ---
 
+## 🚀 NEW: SOTA Enhanced Analysis Pipeline
+
+### Enhanced Model Comparison (`sota_pipeline.py`)
+
+A comprehensive model comparison pipeline featuring state-of-the-art transformers and advanced ML techniques.
+
+#### Models Included (9 Total)
+
+| Model | Type | Parameters | Accuracy |
+|-------|------|------------|----------|
+| **DeBERTa-v3-large** | Transformer | 434M | **74.5%** |
+| RoBERTa-large | Transformer | 355M | 72.0% |
+| DeBERTa-v3-base | Transformer | 184M | 71.7% |
+| RoBERTa-base | Transformer | 125M | 68.7% |
+| DistilBERT | Transformer | 66M | 68.7% |
+| CatBoost | ML | - | 68.2% |
+| XGBoost | ML | - | 67.0% |
+| LightGBM | ML | - | 66.2% |
+| Ensemble | ML | - | 62.8% |
+
+#### Techniques Applied
+
+1. **SMOTE (Synthetic Minority Over-sampling)** - Handles class imbalance
+2. **Advanced Feature Engineering** - TF-IDF tri-grams + domain-specific features
+3. **Fine-tuning** - Domain-specific transformer training
+4. **Hazard Severity Encoding** - Risk-based feature weighting
+5. **Country Risk Encoding** - Geographic food safety features
+
+#### Quick Run
+
+```bash
+# Navigate to project
+cd AI-DIET-AND-FOOD-SAFETY-RECOMMENDER
+
+# Activate environment
+.\.venv\Scripts\activate  # Windows
+source .venv/bin/activate  # Linux/Mac
+
+# Run SOTA pipeline
+python sota_pipeline.py
+```
+
+#### Output Tables
+
+**Table 1: Diet Type Analysis**
+- Recommendation scores by diet (Vegan, Vegetarian, Keto, Regular)
+- Safety scores, health scores, and top suggestions
+
+**Table 2: Model Performance Comparison**
+- Accuracy, Precision, Recall, F1-Score for all 9 models
+- Best model highlighted
+
+#### Output Files
+- `model_comparison_sota.csv` — Performance metrics for all models
+- `diet_type_analysis_sota.csv` — Diet-wise recommendation analysis
+- `all_recommendations_sota.csv` — Complete user recommendations
+
+---
+
 ## Why it matters
 
 Most diet recommenders optimize for calories or macros only. Foodborne risks (pathogens, heavy metals, toxins) aren't considered even though they materially impact health. This project fuses a learned safety model with nutrition data and user profiles to deliver recommendations that are both safe and healthy.
